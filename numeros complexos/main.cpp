@@ -7,20 +7,8 @@ struct complex{
 	   float imag;	
 };
 
-complex soma(const complex c1, const complex c2){
-	complex c3;
-	c3.real = c1.real + c2.real;
-	c3.imag = c1.imag + c2.imag;
-	
-	return c3;
-}
-
-complex produto(const complex c1, const complex c2){
-	complex c3;
-	c3.real = c1.real*c2.real - c1.imag*c2.imag;
-	c3.imag = c1.real*c2.imag + c1.imag*c2.real;
-	return c3;
-}
+complex soma(const complex c1, const complex c2);
+complex produto(const complex c1, const complex c2);
 
 int main()
 {
@@ -41,4 +29,19 @@ int main()
 	cout << "Real: " << s.real << " Imag: " << s.imag;
 
     return 0;       
+}
+
+complex soma(const complex c1, const complex c2){
+	complex c3;
+	c3.real = c1.real + c2.real;
+	c3.imag = c1.imag + c2.imag;
+	
+	return c3;
+}
+
+complex produto(const complex c1, const complex c2){
+	complex c3;
+	c3.real = c1.real*c2.real - c1.imag*c2.imag;
+	c3.imag = c1.real*c2.imag + c1.imag*c2.real;
+	return c3;
 }
