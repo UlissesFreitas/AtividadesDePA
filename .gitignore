@@ -2,3 +2,6 @@
 *.exe
 *.fpj
 *.layout
+*.o
+*.win
+*dev
